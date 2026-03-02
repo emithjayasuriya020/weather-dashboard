@@ -47,20 +47,15 @@ This project helps beginners learn:
 **Tools**
 
 * Git & GitHub
-* Vercel / Netlify (deployment)
+* Vercel(deployment)
 
 ---
 
 ## ✨ Features
 
 * 🔍 Search weather by city name
-* 📍 Auto-detect location (optional)
 * 🌡️ Current temperature display
 * 📅 Multi-day forecast
-* 📊 Weather data visualization
-* 🔄 Unit switching (°C / °F)
-* 💾 Search history (localStorage)
-* 🎨 Dynamic UI based on weather
 * ⚡ Fast loading with skeleton screens
 
 ---
@@ -182,6 +177,8 @@ Steps:
 * Weather alerts
 * Light mode
 * Mobile app version
+* Search history (localStorage)
+* Auto-detect location (optional)
 
 ---
 
