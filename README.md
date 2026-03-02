@@ -164,12 +164,6 @@ Steps:
 
 ---
 
-## 📄 Example README Sections for GitHub Profile
-
-> "I built this weather dashboard to learn API integration, async JavaScript, and React project structuring. This project helped me understand how real-world web apps fetch, manage, and visualize live data."
-
----
-
 ## 📌 Future Improvements
 
 * User accounts
