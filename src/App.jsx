@@ -14,15 +14,12 @@ function App() {
     setLoading(true);
     setError(null);
     try {
-      // 1. Get the coordinates for the city name
       const coords = await getCoordinates(city);
       
-      // 2. Use those coordinates to get the weather
       const data = await getWeatherData(coords.latitude, coords.longitude);
       
-      console.log("Weather received:", data); // Check your console for this!
+      console.log("Weather received:", data);
       
-      // 3. Save everything to state
       setWeather({ ...data, cityName: coords.name });
     } catch (err) {
       console.error(err);
