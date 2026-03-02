@@ -12,7 +12,8 @@ A modern, beginner-friendly **Weather Dashboard Web App** built with React that 
 
 ## 📸 Preview
 
-> *(Add screenshots or a GIF of your app here)*
+<img width="1919" height="952" alt="image" src="https://github.com/user-attachments/assets/9db43d8f-8ad0-495a-8fd0-7eae6a7e08d8" />
+
 
 ---
 
