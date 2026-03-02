@@ -4,6 +4,9 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import { useEffect } from 'react';
 import { getWeatherData } from './weatherService';
+import { WeatherCard } from './components/WeatherCard';
+import { ForecastGrid } from './components/ForecastGrid';
+import { SearchBar } from './components/SearchBar';
 
 function App() {
   useEffect(() => {
@@ -16,9 +19,12 @@ function App() {
   }, []);
 
   return (
-    <div style={{ textAlign: 'center', marginTop: '50px' }}>
-      <h1>Check The console</h1>
-      <p>Right-click , Inspect , Console to see the live data</p>
+    <div className="app-container">
+      <h1>SkyCast Weather</h1>
+      
+      <SearchBar/>
+      <WeatherCard/>
+      <ForecastGrid/>
     </div>
   )
 }
