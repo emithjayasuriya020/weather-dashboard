@@ -1,4 +1,3 @@
-// 1. The Translator: Turns "London" into Lat: 51, Lon: 0
 export const getCoordinates = async (city) => {
     try {
         const response = await fetch(
@@ -12,15 +11,13 @@ export const getCoordinates = async (city) => {
             throw new Error("City Not Found");
         }
 
-        // Return the first result (latitude, longitude, and name)
         return data.results[0];
     } catch (error) {
         console.error("Geocoding Error:", error);
-        throw error; // Let App.jsx handle the error message
+        throw error; 
     }
 };
 
-// 2. The Weather Fetcher: Uses the numbers to get the actual temperature
 export const getWeatherData = async (lat, lon) => {
     try {
         const response = await fetch(
