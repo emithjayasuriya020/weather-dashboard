@@ -4,8 +4,11 @@ import { getWeatherData, getCoordinates } from './weatherService'; // Added getC
 import WeatherCard from './components/WeatherCard';
 import ForecastGrid from './components/ForecastGrid';
 import SearchBar from './components/SearchBar';
+import Auth from './components/Auth';
 
 function App() {
+  const [isAuthenticated, setIsAuthenticated] = useState(!!localStorage.getItem('token'));
+
   const [weather, setWeather] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
@@ -29,17 +32,39 @@ function App() {
     }
   };
 
+  const handleLogout = () => {
+    localStorage.removeItem('token');
+    setIsAuthenticated(false);
+    setWeather(null);
+  }
+
   return (
     <div className="app">
-      <h1>Weather Dashboard</h1>
-      <SearchBar onSearch={handleSearch} />
+      <header style={{ style: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '20px' }}>
+        <h1>Weather Dashboard</h1>
+        {/* Only show the Logout button if they are actually logged in */}
+        {isAuthenticated && (
+          <button onClick={handleLogout} style={{ padding: '8px 16px', cursor: 'pointer'}}>
+            Logout
+          </button>
+        )}
+      </header>
 
-      {loading && <p>Loading weather...</p>}
-      {error && <p style={{ color: 'red' }}>{error}</p>}
+      <main>
+        {!isAuthenticated ? (
+          <Auth onLoginSuccess={() => setIsAuthenticated(true)} />
+        ) : (
+          <>
+            <SearchBar onSearch={handleSearch} />
 
-      {weather && <WeatherCard data={weather} />}
+            {loading && <p>Loading Weather...</p>}
+            {error && <p style={{ color: 'red' }}>{error}</p>}
+
+            {weather && <WeatherCard data={weather} />}
+          </>  
+        )}
+      </main>
     </div>
-  )
-}
+  )};
 
 export default App;
