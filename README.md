@@ -14,21 +14,20 @@ A modern, beginner-friendly **Weather Dashboard Web App** built with React that 
 
 <img width="1919" height="952" alt="image" src="https://github.com/user-attachments/assets/9db43d8f-8ad0-495a-8fd0-7eae6a7e08d8" />
 
-
 ---
 
 ## 🎯 Project Purpose
 
 This project helps beginners learn:
 
-* How APIs work in real applications
-* How to structure a real React project
-* State management with React hooks
-* Fetching and handling async data
-* Error handling & loading states
-* Building reusable components
-* Clean UI design principles
-* GitHub project structuring
+- How APIs work in real applications
+- How to structure a real React project
+- State management with React hooks
+- Fetching and handling async data
+- Error handling & loading states
+- Building reusable components
+- Clean UI design principles
+- GitHub project structuring
 
 ---
 
@@ -36,27 +35,30 @@ This project helps beginners learn:
 
 **Frontend**
 
-* React (Vite)
-* Tailwind CSS
+- React (Vite)
+- Tailwind CSS
 
 **Data & APIs**
 
-* Open-Meteo API (weather data)
-* Geocoding API (city → latitude/longitude)
+- Open-Meteo API (weather data)
+- Geocoding API (city → latitude/longitude)
 
 **Tools**
 
-* Git & GitHub
-* Vercel(deployment)
+- Git & GitHub
+- Vercel(deployment)
 
 ---
 
 ## ✨ Features
 
-* 🔍 Search weather by city name
-* 🌡️ Current temperature display
-* 📅 Multi-day forecast
-* ⚡ Fast loading with skeleton screens
+- 🔍 Search weather by city name
+- 🌡️ Current temperature display
+- 📅 Multi-day forecast
+- ⚡ Fast loading with skeleton screens
+- 👤 User registration and authentication
+- ⭐ Save and manage favorite cities
+- 🔗 Full-stack integration with a backend server
 
 ---
 
@@ -103,7 +105,13 @@ cd weather-dashboard
 npm install
 ```
 
-### 3️⃣ Run the App
+### 3️⃣ Run the Backend Server
+
+```bash
+node server.js
+```
+
+### 4️⃣ Run the Frontend App
 
 ```bash
 npm run dev
@@ -119,15 +127,17 @@ http://localhost:5173
 
 ## 🧠 Learning Goals
 
-By building this project, you will learn:
+By building this project, I learn:
 
-* How frontend apps communicate with APIs
-* How to manage state in React
-* Component-based architecture
-* Clean code structure
-* Real-world project workflow
-* GitHub project management
-* Deployment pipelines
+- How frontend apps communicate with APIs
+- How to manage state in React
+- Component-based architecture
+- Clean code structure
+- Real-world project workflow
+- GitHub project management
+- Deployment pipelines
+- User accounts
+- Favorite cities
 
 ---
 
@@ -148,31 +158,13 @@ This project follows a structured learning flow:
 
 ---
 
-## 🚀 Deployment
-
-You can deploy this project using:
-
-* Vercel
-* Netlify
-
-Steps:
-
-1. Push project to GitHub
-2. Connect repo to Vercel/Netlify
-3. Auto-deploy
-4. Share live link
-
----
-
 ## 📌 Future Improvements
 
-* User accounts
-* Favorite cities
-* Weather alerts
-* Light mode
-* Mobile app version
-* Search history (localStorage)
-* Auto-detect location (optional)
+- Weather alerts
+- Light mode
+- Mobile app version
+- Search history
+- Auto-detect location
 
 ---
 
@@ -189,4 +181,4 @@ GitHub: https://github.com/emithjayasuriya020
 
 ---
 
-> 🌱 *This project is built for learning, growth, and skill development. Start simple, build smart, and improve continuously.*
+> 🌱 _This project is built for learning, growth, and skill development. Start simple, build smart, and improve continuously._
