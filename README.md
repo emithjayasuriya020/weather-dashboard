@@ -79,6 +79,7 @@ This project helps beginners learn:
   index.css
   main.jsx
   weatherService.js
+.env.example
 .gitignore
 README.md
 eslint.config.js
