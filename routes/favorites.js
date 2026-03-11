@@ -61,7 +61,7 @@ router.delete('/remove/:cityName', verifyToken, async (req, res) => {
             return res.status(404).json({ message: 'User Not Found!' });
         }
 
-        user.favouriteCities = user.favoriteCities.filter(
+        user.favoriteCities = user.favoriteCities.filter(
             (city) => city.cityName !== cityName
         );
 

@@ -1,9 +1,55 @@
-export default  function WeatherCard({ data }) {
-    return (
-        <div className="weather-card">
-            <h2>{data.cityName}</h2>
-            <h1>{data.current_weather.temperature}°C</h1>
-            <p>Wind speed: {data.current_weather.windspeed} km/h</p>
+import React from 'react';
+
+export default function WeatherCard({ data }) {
+  if (!data || !data.current_weather) return null;
+
+  const getCurrentTime = () => {
+    const date = new Date();
+    return date.toLocaleDateString('en-US', { 
+      weekday: 'long', 
+      hour: 'numeric', 
+      minute: '2-digit' 
+    });
+  };
+
+  const temp = Math.round(data.current_weather.temperature);
+  const windspeed = data.current_weather.windspeed;
+  const city = data.cityName || 'Unknown City';
+
+  return (
+    <div className="demo-weather-card" style={{ width: '100%', margin: '0 auto' }}>
+      
+      {/* CARD HEADER */}
+      <div className="dwc-header">
+        <div>
+          <h3>{city}</h3>
+          <p>{getCurrentTime()}</p>
         </div>
-    );
+        
+        {/* Sun Icon */}
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#eab308" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <circle cx="12" cy="12" r="5"></circle>
+          <line x1="12" y1="1" x2="12" y2="3"></line>
+          <line x1="12" y1="21" x2="12" y2="23"></line>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+          <line x1="1" y1="12" x2="3" y2="12"></line>
+          <line x1="21" y1="12" x2="23" y2="12"></line>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+      </div>
+
+      {/* CARD BODY (Temp and Wind Speed) */}
+      <div className="dwc-body">
+        <div className="dwc-temp">{temp}°</div>
+        <div className="dwc-cond">
+          <p>CURRENT</p>
+          <p>Wind: {windspeed} km/h</p>
+        </div>
+      </div>
+      
+      {/* Footer was removed from here! */}
+    </div>
+  );
 }
