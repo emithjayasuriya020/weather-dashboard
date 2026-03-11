@@ -1,0 +1,300 @@
+/* Auth.css */
+
+/* 1. The outer background (matches the soft grayish-blue from the image) */
+.auth-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 85vh;
+  width: 100%;
+  padding: 40px 20px;
+  box-sizing: border-box;
+  /* Soft background matching the image's canvas */
+  background-color: #f4f7fb; 
+  background-image: radial-gradient(circle at top right, #eaf0f8 0%, #f4f7fb 50%, #f0f4f9 100%);
+}
+
+/* 2. The main card container */
+@keyframes slideUpFade {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.auth-container {
+  display: flex;
+  width: 100%;
+  max-width: 900px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.05); /* Softer, wider shadow */
+  overflow: hidden;
+  font-family: system-ui, -apple-system, sans-serif;
+  animation: slideUpFade 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* 3. Left Side - Blue Branding */
+.auth-left {
+  flex: 1;
+  /* Exact vibrant blue from the image */
+  background: linear-gradient(145deg, #3672f8 0%, #2558eb 100%);
+  color: white;
+  padding: 50px 40px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.auth-icon-wrapper {
+  background: rgba(255, 255, 255, 0.15);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 35px;
+}
+
+.auth-left h2 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin: 0 0 16px 0;
+  z-index: 2;
+}
+
+.auth-left p {
+  font-size: 1.05rem;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 40px;
+  max-width: 95%;
+  z-index: 2;
+}
+
+.auth-features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-top: auto;
+  z-index: 2;
+}
+
+.auth-features li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.feature-icon {
+  background: white;
+  color: #2563eb;
+  border-radius: 50%;
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Left Side Decorative Rings */
+.bg-circle {
+  position: absolute;
+  border: 1.5px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  z-index: 1;
+}
+.bg-circle-1 {
+  width: 350px; height: 350px;
+  bottom: -150px; right: -100px;
+}
+.bg-circle-2 {
+  width: 550px; height: 550px;
+  bottom: -250px; right: -200px;
+}
+.bg-circle-3 {
+  width: 750px; height: 750px;
+  bottom: -350px; right: -300px;
+}
+
+/* 4. Right Side - Form */
+.auth-right {
+  flex: 1;
+  padding: 50px 45px;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.auth-right h3 {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #111827;
+  margin: 0 0 8px 0;
+}
+
+.auth-subtitle {
+  color: #6b7280;
+  margin: 0 0 35px 0;
+  font-size: 0.95rem;
+}
+
+.form-group {
+  margin-bottom: 22px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #374151;
+  margin-bottom: 8px;
+}
+
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-icon {
+  position: absolute;
+  left: 16px;
+  color: #9ca3af;
+  width: 18px;
+  height: 18px;
+}
+
+.input-icon.right {
+  left: auto;
+  right: 16px;
+  cursor: pointer;
+}
+
+.auth-input {
+  width: 100%;
+  padding: 14px 14px 14px 44px;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  color: #111827;
+  background-color: #f9fafb; /* Extremely light gray from image */
+  box-sizing: border-box;
+  transition: all 0.2s ease;
+}
+
+.auth-input::placeholder {
+  color: #9ca3af;
+}
+
+.auth-input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1);
+}
+
+/* 5. Buttons */
+.btn-primary {
+  width: 100%;
+  padding: 14px;
+  background-color: #2b6cf8; /* Exact blue for the button */
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 10px;
+  box-shadow: 0 6px 16px rgba(43, 108, 248, 0.25); /* Glow effect */
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.btn-primary:hover {
+  background-color: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 28px 0;
+  color: #9ca3af;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.divider::before,
+.divider::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.divider::before { margin-right: 15px; }
+.divider::after { margin-left: 15px; }
+
+.btn-secondary {
+  width: 100%;
+  padding: 14px;
+  background-color: white;
+  color: #1f2937;
+  border: 1px solid #d1d5db;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: all 0.2s;
+}
+
+.btn-secondary:hover {
+  background-color: #f9fafb;
+  border-color: #9ca3af;
+}
+
+.auth-footer {
+  text-align: center;
+  margin-top: 28px;
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+.auth-link {
+  color: #2b6cf8;
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+  background: none;
+  padding: 0;
+}
+
+.auth-link:hover {
+  text-decoration: underline;
+}
+
+/* 6. Responsive adjustments */
+@media (max-width: 768px) {
+  .auth-container {
+    flex-direction: column;
+    max-width: 450px;
+  }
+  .auth-left {
+    padding: 40px 30px;
+  }
+  .auth-right {
+    padding: 40px 30px;
+  }
+}
