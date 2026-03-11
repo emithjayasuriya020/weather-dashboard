@@ -146,7 +146,7 @@ function App() {
           <svg width="32" height="32" viewBox="0 0 24 24" fill="#3b82f6" xmlns="http://www.w3.org/2000/svg">
             <path d="M6.5 17.5L17.5 17.5C20.5376 17.5 23 15.0376 23 12C23 9.07008 20.7093 6.67803 17.8593 6.42588C17.3826 3.03244 14.4697 0.398254 11 0.398254C7.13401 0.398254 4 3.53226 4 7.39825C4 7.53506 4.00392 7.67086 4.01166 7.80564C1.72126 8.15657 0 10.1128 0 12.3983C0 15.1597 2.23858 17.5 5 17.5H6.5Z" />
           </svg>
-          <span className="logo-text">SkyCast</span>
+          <span className="logo-text">Meteora</span>
         </div>
         
         <div className="nav-container">
@@ -264,7 +264,7 @@ function App() {
       )}
 
       <footer style={{ textAlign: 'center', padding: '24px', color: '#9ca3af', fontSize: '0.85rem', fontWeight: '500', borderTop: '1px solid #e5e7eb', backgroundColor: '#ffffff', marginTop: 'auto' }}>
-        © 2024 SkyCast Weather Dashboard. All forecast data provided by Global Meteor.
+        © {new Date().getFullYear()} Meteora. Delivering precision forecasts and hyper-local weather insights worldwide.
       </footer>
 
     </div>

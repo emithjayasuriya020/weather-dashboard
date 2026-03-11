@@ -1,4 +1,4 @@
-# 🌦️ Weather Dashboard
+# 🌦️ Weather Dashboard - Meteora
 
 A modern, beginner-friendly **Weather Dashboard Web App** built with React that shows real-time weather data, forecasts, and trends using public APIs. This project is designed as a **learning journey** for beginners to understand real-world frontend development, API integration, and clean project structure.
 
